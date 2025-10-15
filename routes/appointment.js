@@ -98,7 +98,7 @@ router.put("/:id", isAdmin, async (req, res) => {
 });
 
 // delete appointment
-router.delete("/:id", isAdmin, async (req, res) => {
+router.delete("/:id", isValidUser, async (req, res) => {
   try {
     const id = req.params.id;
     await deleteAppointment(id);

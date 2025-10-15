@@ -43,15 +43,6 @@ async function addAppointment(
     );
   }
 
-  const startTime = dayjs(date).hour(9).minute(0);
-  const endTime = dayjs(date).hour(18).minute(0);
-
-  if (dayjs(date).isBefore(startTime) || dayjs(date).isAfter(endTime)) {
-    throw new Error(
-      "Please choose a time within working hours (9am - 6pm) only."
-    );
-  }
-
   // create new product
   const newAppointment = new Appointment({
     customerName,

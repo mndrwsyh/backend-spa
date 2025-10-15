@@ -50,7 +50,7 @@ router.post("/", isAdmin, async (req, res) => {
     const image = req.body.image;
 
     // make sure all fields are not empty
-    if (!name || !price || !duration || !description) {
+    if (!name || !price || !duration || !description || !image) {
       return res.status(400).send({
         message: "All the fields are required",
       });
@@ -78,7 +78,7 @@ router.put("/:id", isAdmin, async (req, res) => {
     const image = req.body.image;
 
     // make sure all fields are not empty
-    if (!name || !price || !duration || !description) {
+    if (!name || !price || !duration || !description || !image) {
       return res.status(400).send({
         message: "All the fields are required",
       });

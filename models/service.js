@@ -18,7 +18,10 @@ const serviceSchema = new Schema({
     type: String,
     required: true,
   },
-  image: String,
+  image: {
+    type: String,
+    required: true,
+  },
 });
 
 // create a Modal from the schema

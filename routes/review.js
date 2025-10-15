@@ -66,7 +66,7 @@ router.post("/", isValidUser, async (req, res) => {
 });
 
 // delete review
-router.delete("/:id", isAdmin, async (req, res) => {
+router.delete("/:id", isValidUser, async (req, res) => {
   try {
     const id = req.params.id;
     await deleteReview(id);
